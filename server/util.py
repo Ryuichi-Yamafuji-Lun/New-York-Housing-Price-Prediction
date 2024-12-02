@@ -42,11 +42,15 @@ def get_estimated_price(location,sqft,bhk,bath):
 def get_location_names():
     return __locations
 
+def get_columns():
+    return __data_columns
+
 # for testing purposes (python3 util.py)
 if __name__ == "__main__":
     load_artifacts()
 
     print("Locations:", get_location_names())
+    print("Columns: ", get_columns())
     print(get_estimated_price('brooklyn',1000, 3, 3))
     print(get_estimated_price('brooklyn', 1000, 2, 2))
     print(get_estimated_price('manhattan', 1000, 2, 2)) 

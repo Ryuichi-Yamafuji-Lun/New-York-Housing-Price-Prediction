@@ -1,4 +1,4 @@
-from fastapi import FastAPI
+from fastapi import FastAPI, Form
 from fastapi.responses import JSONResponse
 import util
 
@@ -17,3 +17,14 @@ async def get_location_names():
 
     return response
 
+@app.post("/predict_home_price")
+async def predict_home_price(
+    total_sqft: float = Form(...),
+    location: str = Form(...),
+    bhk: int = Form(...),
+    bath: int = Form(...)
+):
+    estimated_price = util.get_estimated_price(location, total_sqft, bhk, bath)
+    response = JSONResponse(content={"estimated_price": estimated_price})
+    response.headers["Access-Control-Allow-Origin"] = "*"
+    return response
