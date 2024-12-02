@@ -1,7 +1,7 @@
 import pickle
 import json
 import numpy as np
-import pathlib
+from pathlib import Path
 import warnings
 warnings.filterwarnings("ignore", category=UserWarning, module="sklearn")
 
