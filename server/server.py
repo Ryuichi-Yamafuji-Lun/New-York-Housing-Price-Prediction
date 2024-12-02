@@ -5,7 +5,7 @@ import util
 app = FastAPI()
 
 # load location, columns, and model on start up
-@app.get("startup")
+@app.on_event("startup")
 async def load_data():
     util.load_artifacts()
 
@@ -16,3 +16,4 @@ async def get_location_names():
     response.headers["Access-Control-Allow-Origin"] = "*"
 
     return response
+
