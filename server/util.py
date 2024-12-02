@@ -1,6 +1,7 @@
 import pickle
 import json
 import numpy as np
+import pathlib
 import warnings
 warnings.filterwarnings("ignore", category=UserWarning, module="sklearn")
 
@@ -14,7 +15,8 @@ def load_artifacts():
     global __data_columns
     global __model
 
-    with open("../model/columns.json", "r") as f:
+    model_columns_path = Path(__file__).parent / "model" / "columns.json"
+    with open(model_columns_path, "r") as f:
         __data_columns = json.load(f)['data_columns']
         __locations = __data_columns[3:]
 
