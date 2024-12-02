@@ -1,6 +1,8 @@
 import pickle
 import json
 import numpy as np
+import warnings
+warnings.filterwarnings("ignore", category=UserWarning, module="sklearn")
 
 __locations = None
 __data_columns = None
@@ -22,5 +24,30 @@ def load_artifacts():
     
     print("Loading artifact is done")
 
+def get_estimated_price(location,sqft,bhk,bath):
+    try:
+        loc_index = __data_columns.index(location.lower())
+    except:
+        loc_index = -1
+
+    x = np.zeros(len(__data_columns))
+    x[0] = bhk
+    x[1] = bath
+    x[2] = sqft
+    if loc_index>=0:
+        x[loc_index] = 1
+
+    return round(__model.predict([x])[0],2)
+
 def get_location_names():
     return __locations
+
+# for testing purposes (python3 util.py)
+if __name__ == "__main__":
+    load_artifacts()
+
+    print("Locations:", get_location_names())
+    print(get_estimated_price('brooklyn',1000, 3, 3))
+    print(get_estimated_price('brooklyn', 1000, 2, 2))
+    print(get_estimated_price('manhattan', 1000, 2, 2)) 
+    print(get_estimated_price('manhattan', 1000, 2, 2))
