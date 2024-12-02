@@ -1,6 +1,6 @@
 from fastapi import FastAPI, Form
 from fastapi.responses import JSONResponse
-import util
+from server import util
 
 app = FastAPI()
 
