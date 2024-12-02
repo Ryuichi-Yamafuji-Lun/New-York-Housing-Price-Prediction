@@ -22,4 +22,5 @@ def load_artifacts():
     
     print("Loading artifact is done")
 
-
+def get_location_names():
+    return __locations
