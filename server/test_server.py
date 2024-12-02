@@ -1,6 +1,6 @@
 import pytest
 from fastapi.testclient import TestClient
-import util
+from . import util
 from server import app  # Your FastAPI app
 
 # Setup the test client
