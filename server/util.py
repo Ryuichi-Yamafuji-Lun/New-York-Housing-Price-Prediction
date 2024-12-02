@@ -19,7 +19,7 @@ def load_artifacts():
         __locations = __data_columns[3:]
 
     if __model is None:
-        with open("../model/new_york_home_prices_model.pickle", "rb") as f:
+        with open("./model/new_york_home_prices_model.pickle", "rb") as f:
             __model = pickle.load(f)
     
     print("Loading artifact is done")
