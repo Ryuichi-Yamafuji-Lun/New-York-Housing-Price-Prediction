@@ -3,7 +3,7 @@ import NYImage from '../../../client/src/assets/NewYork.png'
 
 const WelcomePage = () => {
   return (
-    <div className="bg-white min-h-screen flex flex-col justify-center items-center">
+    <div className="min-h-screen flex flex-col justify-center items-center">
       {/* Navbar */}
       <nav className="w-full flex justify-between items-center px-8 py-2 shadow-md">
         <div className="text-2xl font-bold text-purple-800">NY Home Value Forecast</div>
@@ -18,7 +18,7 @@ const WelcomePage = () => {
       </nav>
 
       {/* Welcome Section */}
-      <div className="flex flex-col-reverse md:flex-row items-center mt-16 md:mt-32 px-8">
+      <div className="flex flex-col-reverse md:flex-row items-center m-16 md:m-16 px-8">
         {/* Text Content */}
         <div className="md:w-1/2 text-center md:text-left">
           <h1 className="text-4xl md:text-5xl font-bold text-gray-900">
@@ -36,7 +36,7 @@ const WelcomePage = () => {
           <p className="text-gray-500 mt-4 text-sm italic">
             Disclaimer: This platform is for educational purposes only and should not be used for real-world financial or real estate decisions.
           </p>
-          <button className="bg-blue-600 text-white px-6 py-3 rounded-lg shadow-md hover:bg-blue-500 mt-6">
+          <button className="bg-purple-800 text-white px-6 py-3 rounded-lg shadow-md hover:bg-purple-600 mt-6">
             Get Started
           </button>
         </div>
