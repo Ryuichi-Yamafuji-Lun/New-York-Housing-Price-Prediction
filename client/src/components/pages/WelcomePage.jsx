@@ -1,5 +1,5 @@
 import React from "react";
-import NYImage from '../../../client/src/assets/NewYork.png'
+import NYImage from '../../../../client/src/assets/NewYork.png'
 
 const WelcomePage = () => {
   return (
