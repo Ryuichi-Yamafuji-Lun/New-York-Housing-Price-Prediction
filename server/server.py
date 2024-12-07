@@ -1,8 +1,18 @@
 from fastapi import FastAPI, Form
+from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import JSONResponse
 from server import util
 
 app = FastAPI()
+
+# enable CORS
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"], 
+    allow_credentials=True,
+    allow_methods=["*"],  
+    allow_headers=["*"], 
+)
 
 # load location, columns, and model on start up
 @app.on_event("startup")
