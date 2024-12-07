@@ -6,7 +6,7 @@ const NavBar = () => {
             <a href="#about" className="text-gray-700 hover:text-purple-800">
                 About
             </a>
-            <a href="#product" className="text-gray-700 hover:text-purple-800">
+            <a href="forecast" className="text-gray-700 hover:text-purple-800">
                 Forecast
             </a>
             </div>
