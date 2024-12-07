@@ -1,7 +1,15 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import NYImage from '../../../../client/src/assets/NewYork.png'
 
 const WelcomePage = () => {
+  const navigate = useNavigate();
+
+  const handleGetStarted = () => {
+    navigate("/forecast"); 
+  };
+
+
   return (
     <div className="min-h-screen flex flex-col justify-center items-center">
       {/* Welcome Section */}
@@ -23,7 +31,10 @@ const WelcomePage = () => {
           <p className="text-gray-500 mt-4 text-sm italic">
             Disclaimer: This platform is for educational purposes only and should not be used for real-world financial or real estate decisions.
           </p>
-          <button className="bg-purple-800 text-white px-6 py-3 rounded-lg shadow-md hover:bg-purple-600 mt-6">
+          <button 
+            className="bg-purple-800 text-white px-6 py-3 rounded-lg shadow-md hover:bg-purple-600 mt-6"
+            onClick={handleGetStarted}
+          >
             Get Started
           </button>
         </div>
