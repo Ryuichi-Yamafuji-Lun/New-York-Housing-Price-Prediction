@@ -1,7 +1,7 @@
 # New-York-Housing-Price-Prediction
 
 ## Link
-[Live Demo](https://your-vercel-url.vercel.app/) 
+
 
 ## Built with
 - React
