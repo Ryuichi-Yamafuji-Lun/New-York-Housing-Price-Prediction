@@ -1,7 +1,8 @@
 # New-York-Housing-Price-Prediction
 
 ## Link
-https://new-york-housing-price-prediction.vercel.app/
+<a href="https://new-york-housing-price-prediction.vercel.app/" target="_blank">https://new-york-housing-price-prediction.vercel.app/</a>
+
 
 ## Built with
 - React
