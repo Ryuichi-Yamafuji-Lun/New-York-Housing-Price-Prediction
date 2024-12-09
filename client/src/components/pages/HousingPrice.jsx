@@ -64,6 +64,9 @@ const FormPage = () => {
   return (
     <div className="min-h-screen flex flex-col items-center justify-center p-4">
       <h1 className="text-3xl font-bold mb-6">Housing Price Prediction</h1>
+      <h2 className="text-xl text-yellow-600 bg-yellow-100 p-4 rounded mb-6">
+        Please note: The backend is hosted on Render's free tier, which may cause initial delays. Thank you for your patience!
+      </h2>
 
       <form
         onSubmit={handleSubmit}
